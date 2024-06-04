@@ -1,73 +1,187 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Campus Life</title>
     <style>
+        body {
+            margin: 0px;
+        }
         img {
             width: 200px;
         }
+
+        .cols {
+            display: flex;
+        }
+
+        section {
+            padding: 1em;
+            border: 1px solid black;
+        }
+
+        #banner {
+            text-align: center;
+            padding: 1em;
+            background-color: skyblue;
+        }
+
+        /* .flexwrap {
+            display: flex;
+        } */
+        .gridContainer{
+            display: grid;
+            gap: 1em 1em;
+            grid-template-columns: auto auto auto;
+            /* background-color: #2196F3; */
+            /* padding: 10px; */
+        }
+        .gridItem {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navItemsContainer {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            background-color: lightgray;
+        }
+        .navItemsContainer a {
+            padding: 1em;
+            
+        }
+        .navItemsContainer a:hover {
+            background-color: violet;
+            
+        }
+        .mainContent {
+            max-width: 800px;
+            margin: auto;
+            background-color: aqua;
+        }
+        
     </style>
 </head>
+
 <body>
     <header id="banner">
         <h1>Student Life</h1>
         <p>
             This is the banner
         </p>
-        
+
     </header>
-    <nav id="navigation">
-        <p>
-            This is my nav bar
-        </p>
-        <div style="display:flex;width:100%;justify-content: space-between;">
-            <a href='#studentOrganizations'>Student Organizations</a>
-            <a href='#upcomingEvents'>Upcoming Events</a>
-            <a href='#campusNews'>Campus News</a>
-        </div>
+    <nav id="navigation" class="navItemsContainer">
+        <a href='#studentOrganizations'>Student Organizations</a>
+        <a href='#upcomingEvents'>Upcoming Events</a>
+        <a href='#campusNews'>Campus News</a>
     </nav>
-    <section id="studentOrganizations">
-        <h2>Student Organizations</h3>
-        <section>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/800px-ChessSet.jpg">
-            <h3>Chess Club</h3>
-            <p>about the chess club</p>
+    <div class="mainContent">
+        <section id="studentOrganizations">
+            <h2>Student Organizations</h3>
+                <div class="gridContainer">
+                    <section class="gridItem">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/ChessSet.jpg/800px-ChessSet.jpg">
+                        <h3>Chess Club</h3>
+                        <p>about the chess club</p>
+                    </section>
+                    <section class="gridItem">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/9/97/US_Navy_110713-N-NT881-124_Personnel_Specialist_2nd_Class_James_Vail%2C_left%2C_and_Boatswain%27s_Mate_2nd_Class_Nathaniel_Eaton_play_board_games_with_ch.jpg">
+                        <h3>Board Game Club</h3>
+                        <p>about the board game club</p>
+                    </section>
+                    <section class="gridItem">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Palacky_Court_Room_1.JPG/220px-Palacky_Court_Room_1.JPG"
+                            alt="Generic Chess Set">
+                        <h3>Moot Court</h3>
+                        <p>about the Moot Court Team</p>
+                    </section>
+                </div>
         </section>
-        <section>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/US_Navy_110713-N-NT881-124_Personnel_Specialist_2nd_Class_James_Vail%2C_left%2C_and_Boatswain%27s_Mate_2nd_Class_Nathaniel_Eaton_play_board_games_with_ch.jpg">
-            <h3>Board Game Club</h3>
-            <p>about the board game club</p>
+        <section id="upcomingEvents">
+            <h2>Upcomming Events</h3>
+                <div class="gridContainer">
+                    <section class="gridItem">
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Inflable_openaircinema.jpg/220px-Inflable_openaircinema.jpg">
+                        <h3>Movie Night</h3>
+                        <p>about the upcoming movie night</p>
+                    </section>
+                    <section class="gridItem">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Sven_Vath_playing_at_Amnesia.JPG">
+                        <h3>Rave on the quad</h3>
+                        <p>about the upcoming rave on the quad</p>
+                    </section>
+                    <section class="gridItem">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1200px-President_Barack_Obama.jpg"
+                            alt="Generic Chess Set">
+                        <h3>Guest Speaker</h3>
+                        <p>about the upcoming guest speaker</p>
+                    </section>
+                </div>
         </section>
-        <section>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Palacky_Court_Room_1.JPG/220px-Palacky_Court_Room_1.JPG" alt="Generic Chess Set">
-            <h3>Moot Court</h3>
-            <p>about the Moot Court Team</p>
+        <section id="campusNews">
+            <h2>Campus News</h2>
+            <div class="cols">
+                <article id="headline">
+                    <img
+                        src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fsinwt0ft1z5wxp829tca.jpg">
+                    <h3> Robots Invade Campus</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ipsa voluptates quas ad corporis
+                        libero fugiat. Temporibus repudiandae vel, magni, deserunt sequi atque dolorum, nihil libero aut
+                        natus autem quasi?
+
+                    </p>
+
+                </article>
+                <section>
+                    <a>
+                        <h3>
+                            Russia Invades Ukraine
+
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptate. Delectus quae at
+                            consequuntur nemo. Enim, incidunt. Eligendi quae est quasi ullam modi. Optio ad aspernatur
+                            fugit repudiandae omnis voluptatibus?
+                        </p>
+                    </a>
+                    <a>
+                        <h3>
+                            Is Deen Colman guilty of assult
+
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptate. Delectus quae at
+                            consequuntur nemo. Enim, incidunt. Eligendi quae est quasi ullam modi. Optio ad aspernatur
+                            fugit repudiandae omnis voluptatibus?
+                        </p>
+                    </a>
+                    <a>
+                        <h3>
+                            Which Professors are on Osempic, inside scoop
+
+                        </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, voluptate. Delectus quae at
+                            consequuntur nemo. Enim, incidunt. Eligendi quae est quasi ullam modi. Optio ad aspernatur
+                            fugit repudiandae omnis voluptatibus?
+                        </p>
+                    </a>
+                </section>
+            </div>
+
         </section>
-    </section>
-    <section id="upcomingEvents">
-        <h2>Upcomming Events</h3>
-        <section>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Inflable_openaircinema.jpg/220px-Inflable_openaircinema.jpg">
-            <h3>Movie Night</h3>
-            <p>about the upcoming movie night</p>
-        </section>
-        <section>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Sven_Vath_playing_at_Amnesia.JPG">
-            <h3>Rave on the quad</h3>
-            <p>about the upcoming rave on the quad</p>
-        </section>
-        <section>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/1200px-President_Barack_Obama.jpg" alt="Generic Chess Set">
-            <h3>Guest Speaker</h3>
-            <p>about the upcoming guest speaker</p>
-        </section>
-    </section>
-    <section id="campusNews">
-        <h2>Campus News</h2>
-        <p>here will be the campus news</p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid neque non reprehenderit nemo quasi harum nam sed dolorem, deserunt sapiente eaque sunt quas veniam cum sequi porro ad voluptatum.
-        </p>
-    </section>
+    </div>
+    <footer>
+        <h2>footer</h2>
+    </footer>
 </body>
+
 </html>
